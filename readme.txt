@@ -1,4 +1,4 @@
-<h1 align="center">Fasthunter Optimizer</h1>
+Fasthunter Optimizer
 
 Descrição
 
