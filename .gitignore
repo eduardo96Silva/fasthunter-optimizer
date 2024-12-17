@@ -1,0 +1,12 @@
+# Ignorar pastas específicas
+/build/
+/dist/
+
+# Ignorar configurações de ambiente
+.env
+
+# Ignorar logs
+*.log
+
+# Outros
+serviceAccountkey.json
