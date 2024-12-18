@@ -5,6 +5,7 @@ from tkinter import *
 from tkinter import scrolledtext
 from tkinter import messagebox
 from returnPathAbsolute import *
+import webbrowser
 
 logo_ico_path = get_resource_path("assets/logo1.ico")
 logo_path = get_resource_path("assets/logo1.png")
@@ -63,6 +64,9 @@ def abrir_tela_principal():
         config = {option: var.get() for option, var in options.items()}
         resultado = salvar_configuracoes(config)
         page2_labelResultado.configure(text=resultado)
+        
+    def abrirWebSite(event):
+        webbrowser.open("https://fasthunter-optimizer.web.app")
 
     def iniciar_otimizacao():
         # request_admin(page1_output_status)
@@ -241,9 +245,22 @@ def abrir_tela_principal():
         justify="left",
         pady=10,
         font=("Arial", 12),
-        text=f"Olá, este é o Fasthunter Optimizer, um sistema que otimiza\nseu computador de forma segura, usando técnicas de limpeza e otimização\nde hardware/rede de forma nativa do windows.\n\nEsse sistema foi criado pensando em automatizar essas técnicas para otimizar\nseu computador em apenas 1 clique.\n\n"
+        text=f"Olá, este é o Fasthunter Optimizer, um sistema que otimiza\nseu computador de forma segura, usando técnicas de limpeza e otimização\nde hardware/rede de forma nativa do windows.\n\nEsse sistema foi criado pensando em automatizar essas técnicas para otimizar\nseu computador em apenas 1 clique.\n\nPara saber mais sobre cada processo por trás da otimização\nacesse nosso site:\n"
     )
     page3_texto1.grid(column=1,row=0)
+    
+    page3_url = Label(
+        page3,
+        bg=bg_color,
+        justify="left",
+        font=("Arial", 12),
+        text="https://fasthunter-optimizer.web.app",
+        fg="blue",
+        cursor="hand2"
+    )
+    page3_url.grid(column=1, row=1)
+    
+    page3_url.bind("<Button-1>", abrirWebSite)
 
     page3_carimbo = Label(page3, image=root.logo_letreiro_carimbo, bg=bg_color)
     page3_carimbo.grid(column=2, row=2)
