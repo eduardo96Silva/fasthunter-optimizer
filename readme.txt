@@ -1,73 +1,72 @@
-# Fasthunter Optimizer
+Fasthunter Optimizer
 
+Descrição
 
-## Descrição
+Fasthunter Optimizer é um software de otimização de computadores Windows, desenvolvido em Python com o uso da biblioteca Tkinter para criar uma interface amigável. O objetivo é aplicar técnicas eficazes de limpeza e configurações de desempenho, permitindo que os usuários melhorem o desempenho geral de seus dispositivos de forma rápida e segura.
 
-Este é um sistema de otimização de computadores Windows, desenvolvido em Python utilizando a biblioteca Tkinter para criar uma interface amigável. O software aplica técnicas eficazes de limpeza e otimização nativa do sistema operacional, permitindo que os usuários melhorem o desempenho geral de seus dispositivos de forma rápida e segura.
+Funcionalidades
 
-## Funcionalidades
+O Fasthunter Optimizer executa diversas técnicas de otimização para melhorar a eficiência do seu sistema:
 
-O software executa as seguintes técnicas de otimização:
+1. Remoção de Arquivos Temporários do Sistema
 
-### 1. Remoção de Arquivos Temporários do Sistema
+Descrição: Remove arquivos temporários gerados por aplicativos e processos do sistema.
 
-- **Descrição**: Remove arquivos temporários gerados por aplicativos e processos do sistema que não são mais necessários.
-- **Importância**: Libera espaço no disco, reduz a fragmentação e pode melhorar a velocidade de leitura/escrita.
+Benefício: Libera espaço no disco, reduz fragmentação e melhora a performance geral.
 
-### 2. Habilitação do Desempenho Máximo no Plano de Energia
+2. Habilitação do Desempenho Máximo no Plano de Energia
 
-- **Descrição**: Altera o plano de energia para o máximo desempenho, priorizando a utilização dos recursos de hardware para tarefas intensivas.
-- **Importância**: Útil para melhorar o desempenho em aplicações e jogos que demandam alto processamento.
+Descrição: Altera o plano de energia para o máximo desempenho, priorizando recursos de hardware.
 
-### 3. Liberação de Cache e Busca de Informações DNS Atualizadas
+Benefício: Ideal para jogos e aplicações que demandam alto processamento.
 
-- **Descrição**: Limpa o cache DNS, garantindo que o sistema obtenha informações de DNS atualizadas.
-- **Importância**: Resolve problemas de conexão de rede e melhora a navegação na internet.
+3. Limpeza de Cache e Atualização de Informações DNS
 
-### 4. Configurar o provedor de controle de congestionamento como Compound TCP
+Descrição: Limpa o cache DNS, garantindo que o sistema obtenha informações atualizadas.
 
-- **Descrição**: O Compound TCP (CTCP) é uma tecnologia desenvolvida pela Microsoft para otimizar a transmissão de dados em redes de alta largura de banda e alta latência.
-- **Importância**: Melhor aproveitamento da largura de banda disponível.
-- **Pontos de Atenção**: Se o desempenho de aplicativos em tempo real for crítico, observe o comportamento antes e depois de habilitar o CTCP.
-- **Quando usar essa configuração**:
-    Sim: Conexões de alta largura de banda e alta latência (ex.: transferências de arquivos em servidores internacionais ou redes de alta capacidade).
-    Talvez: Redes domésticas rápidas (ex.: fibra óptica de 500 Mbps ou superior). Os ganhos podem ser limitados.
-    Não: Redes lentas, antigas ou sensíveis a latência (ex.: ADSL, 3G/4G, ou jogos online).
+Benefício: Resolve problemas de conexão e melhora a navegação.
 
-### 5. Configurar o DCA para o protocolo TCP
+4. Configuração do Provedor de Controle de Congestionamento para Compound TCP
 
-- **Descrição**: DCA (Direct Cache Access) é uma tecnologia que permite que dados de entrada e saída sejam enviados diretamente para a memória cache do processador, em vez de passarem pela memória principal primeiro.
-- **Importância**: Reduz a latência da rede e o uso de memória, acelerando a comunicação TCP.
+Descrição: Otimiza a transmissão de dados em redes de alta largura de banda e alta latência.
 
-### 6. Esvaziar lixeira
+Benefício: Melhor aproveitamento da largura de banda.
 
-- **Descrição**: Deleta tudo que tiver na lixeira.
-- **Importância**: Apagar arquivos, inclusive esvaziar a lixeira ajuda a liberar espaço físico de armazenamento no PC.
+5. Ativação do DCA para Protocolo TCP
 
+Descrição: Permite que dados sejam enviados diretamente à cache do processador, acelerando a comunicação TCP.
 
-## Como Utilizar
+Benefício: Reduz latência e melhora a performance da rede.
 
-1. Abra o aplicativo de otimização Fasthunter Optimizer.
-2. Na aba "Otimizar" clique no botão de iniciar otimização e aguarde até que os processos sejam concluídos.
-3. Reinicie o computador para garantir que todas as alterações tenham efeito.
-Obs: 
-    Caso queira deixar a otimização mais robusta, você pode habilitar opções de otimização "extra" na aba de configurações, porém é crucial saber oque cada processo faz antes de habilitar!
-    Certifique-se de salvar as configurações após habilitar/desabilitar alguma opção.
+6. Esvaziamento da Lixeira
 
+Descrição: Deleta permanentemente os arquivos armazenados na lixeira.
 
-## Requisitos
+Benefício: Libera espaço físico no disco.
 
-- Sistema operacional Windows 10 ou superior.
-- Python 3.13.1 ou superior.
-- Permissões de administrador para executar algumas ações do sistema.
+Como Utilizar
 
+Abra o aplicativo Fasthunter Optimizer.
 
-## Aviso
+Na aba "Otimizar", clique no botão Iniciar Otimização e aguarde a conclusão do processo.
 
-Algumas funções deste software podem causar alterações no comportamento do sistema. Utilize com cautela e certifique-se de que compreende as ações que estão sendo aplicadas.
+Reinicie o computador para aplicar as alterações.
 
+Nota:
 
-## Contribuições
+Para otimizações mais robustas, ative opções extras na aba "Configurações". Certifique-se de compreender cada opção antes de ativá-la.
 
-Sinta-se à vontade para contribuir com melhorias ou reportar problemas no repositório oficial do projeto.
+Não se esqueça de salvar as alterações após configurá-las.
+
+Requisitos
+
+Sistema operacional Windows 10 ou superior.
+
+Python 3.13.1 ou superior instalado.
+
+Permissões de administrador para executar algumas funções.
+
+Aviso
+
+Este software realiza alterações significativas no sistema. Use com cautela e certifique-se de entender as ações aplicadas. Realize backup de seus arquivos antes de usar o programa.
 
