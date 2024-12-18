@@ -13,6 +13,32 @@ logo_letreiro_path = get_resource_path("assets/logo-letreiro1.png")
 chipset_path = get_resource_path("assets/chipset16x16.png")
 
 
+def run_as_admin():
+    """
+    Verifica se o script está sendo executado como administrador. 
+    Se não estiver, solicita privilégios administrativos.
+    """
+    try:
+        # Verifica se o script tem privilégios administrativos
+        is_admin = ctypes.windll.shell32.IsUserAnAdmin()
+    except:
+        is_admin = False
+
+    if not is_admin:
+        # Se não for administrador, reexecuta o script como administrador
+        print("Privilégios administrativos necessários. Solicitando...")
+        try:
+            ctypes.windll.shell32.ShellExecuteW(
+                None, "runas", sys.executable, " ".join(sys.argv), None, 1
+            )
+            sys.exit()  # Encerra o script original
+        except Exception as e:
+            print(f"Erro ao solicitar privilégios administrativos: {e}")
+            sys.exit(1)  # Encerra o programa com erro
+
+    # Retorna True se já estiver sendo executado como administrador
+    return True
+
 def abrir_tela_principal():
     """
     Abre a tela principal da aplicação.

@@ -80,16 +80,24 @@ def set_power_plan(output):
         print(f"Erro ao alterar plano de energia")
 
 def clear_trash(output):
+    recycle_bin_path = r"C:\$Recycle.Bin"
+    
+    if not any(os.scandir(recycle_bin_path)):
+        output.insert(END, f"\n● Não foi possível esvaziar a lixeira, pois ela já está vazia!")
+        output.yview(END)
+        print("Lixeira já está vazia!")
+        return
+
     try:
-        # Executa o comando no terminal
-        subprocess.run(['rd', '/s', '/q', r'C:\$Recycle.Bin'], check=True, shell=True)
+        subprocess.run(['rd', '/s', '/q', recycle_bin_path], check=True, shell=True)
         output.insert(END, f"\n✔ Lixeira esvaziada com sucesso!")
         output.yview(END)
         print("Lixeira esvaziada com sucesso!")
-    except subprocess.CalledProcessError as e:
+    except subprocess.CalledProcessError:
         output.insert(END, f"\n✗ Erro ao tentar esvaziar a lixeira")
         output.yview(END)
-        print(f"Erro ao esvaziar a lixeira")
+        print("Erro ao esvaziar a lixeira")
+
 
 def check_and_enable_ctcp(output):
     # Comando para verificar o provedor de congestionamento atual
